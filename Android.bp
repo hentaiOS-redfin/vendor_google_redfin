@@ -168,17 +168,6 @@ android_app_import {
 }
 
 android_app_import {
-	name: "datastatusnotification",
-	owner: "google",
-	apk: "proprietary/system_ext/app/datastatusnotification/datastatusnotification.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	system_ext_specific: true,
-}
-
-android_app_import {
 	name: "uceShimService",
 	owner: "google",
 	apk: "proprietary/system_ext/app/uceShimService/uceShimService.apk",
@@ -294,97 +283,6 @@ android_app_import {
 		enabled: false,
 	},
 	privileged: true,
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "libhwinfo",
-	owner: "google",
-	jars: ["proprietary/product/framework/libhwinfo.jar"],
-	product_specific: true,
-}
-
-dex_import {
-	name: "remotesimlockmanagerlibrary",
-	owner: "google",
-	jars: ["proprietary/product/framework/remotesimlockmanagerlibrary.jar"],
-	product_specific: true,
-}
-
-dex_import {
-	name: "uimgbalibrary",
-	owner: "google",
-	jars: ["proprietary/product/framework/uimgbalibrary.jar"],
-	product_specific: true,
-}
-
-dex_import {
-	name: "uimgbamanagerlibrary",
-	owner: "google",
-	jars: ["proprietary/product/framework/uimgbamanagerlibrary.jar"],
-	product_specific: true,
-}
-
-dex_import {
-	name: "uimlpalibrary",
-	owner: "google",
-	jars: ["proprietary/product/framework/uimlpalibrary.jar"],
-	product_specific: true,
-}
-
-dex_import {
-	name: "uimremoteclientlibrary",
-	owner: "google",
-	jars: ["proprietary/product/framework/uimremoteclientlibrary.jar"],
-	product_specific: true,
-}
-
-dex_import {
-	name: "uimremoteserverlibrary",
-	owner: "google",
-	jars: ["proprietary/product/framework/uimremoteserverlibrary.jar"],
-	product_specific: true,
-}
-
-dex_import {
-	name: "uimremotesimlocklibrary",
-	owner: "google",
-	jars: ["proprietary/product/framework/uimremotesimlocklibrary.jar"],
-	product_specific: true,
-}
-
-dex_import {
-	name: "uimservicelibrary",
-	owner: "google",
-	jars: ["proprietary/product/framework/uimservicelibrary.jar"],
-	product_specific: true,
-}
-
-dex_import {
-	name: "RadioConfigLib",
-	owner: "google",
-	jars: ["proprietary/system_ext/framework/RadioConfigLib.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.android.hotwordenrollment.common.util",
-	owner: "google",
-	jars: ["proprietary/system_ext/framework/com.android.hotwordenrollment.common.util.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "com.google.android.camera.extensions",
-	owner: "google",
-	jars: ["proprietary/system_ext/framework/com.google.android.camera.extensions.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "qcrilhook",
-	owner: "google",
-	jars: ["proprietary/system_ext/framework/qcrilhook.jar"],
 	system_ext_specific: true,
 }
 
@@ -528,13 +426,6 @@ android_app_import {
 	dex_preopt: {
 		enabled: false,
 	},
-	soc_specific: true,
-}
-
-dex_import {
-	name: "com.google.android.camera.experimental2020",
-	owner: "google",
-	jars: ["proprietary/vendor/framework/com.google.android.camera.experimental2020.jar"],
 	soc_specific: true,
 }
 
