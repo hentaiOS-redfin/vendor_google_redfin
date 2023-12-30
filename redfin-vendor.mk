@@ -126,7 +126,6 @@ PRODUCT_PACKAGES += \
     RadioConfigLib \
     com.android.hotwordenrollment.common.util \
     com.google.android.camera.extensions \
-    google-ril \
     qcrilhook
 PRODUCT_COPY_FILES += \
     vendor/google/redfin/proprietary/product/etc/CarrierSettings/1and1_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/1and1_de.pb \
