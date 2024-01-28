@@ -663,6 +663,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/redfin/proprietary/vendor/firmware/widevine.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/widevine.mdt \
     vendor/google/redfin/proprietary/vendor/firmware/wlanmdsp.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/wlanmdsp.mbn \
     vendor/google/redfin/proprietary/vendor/framework/com.google.android.camera.experimental2020.jar:$(TARGET_COPY_OUT_VENDOR)/framework/com.google.android.camera.experimental2020.jar \
+    vendor/google/redfin/proprietary/vendor/lib/aoc_audio_stereo_spatializer.so:$(TARGET_COPY_OUT_VENDOR)/lib/aoc_audio_stereo_spatializer.so \
     vendor/google/redfin/proprietary/vendor/lib/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib/btaudio_offload_if.so \
     vendor/google/redfin/proprietary/vendor/lib/camera/components/com.qti.eisv2.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.eisv2.so \
     vendor/google/redfin/proprietary/vendor/lib/camera/components/com.qti.eisv3.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.eisv3.so \
@@ -1003,6 +1004,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/redfin/proprietary/vendor/lib/soundfx/libqcreverb.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcreverb.so \
     vendor/google/redfin/proprietary/vendor/lib/soundfx/libqcvirt.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcvirt.so \
     vendor/google/redfin/proprietary/vendor/lib/soundfx/libshoebox.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libshoebox.so \
+    vendor/google/redfin/proprietary/vendor/lib/soundfx/libspatialaudio.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libspatialaudio.so \
     vendor/google/redfin/proprietary/vendor/lib/soundfx/libvolumelistener.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libvolumelistener.so \
     vendor/google/redfin/proprietary/vendor/lib/vendor-pixelatoms-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor-pixelatoms-cpp.so \
     vendor/google/redfin/proprietary/vendor/lib/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.display.color@1.0.so \
@@ -1103,6 +1105,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/redfin/proprietary/vendor/lib64/android.hardware.weaver-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver-impl.nos.so \
     vendor/google/redfin/proprietary/vendor/lib64/android.hardware.weaver2-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver2-impl.nos.so \
     vendor/google/redfin/proprietary/vendor/lib64/android.hardware.weaver@1.0-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver@1.0-impl.nos.so \
+    vendor/google/redfin/proprietary/vendor/lib64/aoc_audio_stereo_spatializer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/aoc_audio_stereo_spatializer.so \
     vendor/google/redfin/proprietary/vendor/lib64/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib64/btaudio_offload_if.so \
     vendor/google/redfin/proprietary/vendor/lib64/camera/capture_sessions/lib_multicam_dualfov_capture_session.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/capture_sessions/lib_multicam_dualfov_capture_session.so \
     vendor/google/redfin/proprietary/vendor/lib64/camera/com.google.gabc.tuning.imx355.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.google.gabc.tuning.imx355.so \
@@ -1569,6 +1572,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/redfin/proprietary/vendor/lib64/soundfx/libqcreverb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcreverb.so \
     vendor/google/redfin/proprietary/vendor/lib64/soundfx/libqcvirt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcvirt.so \
     vendor/google/redfin/proprietary/vendor/lib64/soundfx/libshoebox.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libshoebox.so \
+    vendor/google/redfin/proprietary/vendor/lib64/soundfx/libspatialaudio.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libspatialaudio.so \
     vendor/google/redfin/proprietary/vendor/lib64/soundfx/libvolumelistener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libvolumelistener.so \
     vendor/google/redfin/proprietary/vendor/lib64/unnhal-acc-adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/unnhal-acc-adreno.so \
     vendor/google/redfin/proprietary/vendor/lib64/unnhal-acc-common.so:$(TARGET_COPY_OUT_VENDOR)/lib64/unnhal-acc-common.so \

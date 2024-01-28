@@ -1,0 +1,766 @@
+
+
+
+<!DOCTYPE html>
+<html class="with-header " lang="en">
+<head prefix="og: http://ogp.me/ns#">
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>vendor/lib/soundfx/libspatialaudio.so · tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085 · Neil Firmware Dumps / google / tangorpro · GitLab</title>
+<script>
+//<![CDATA[
+window.gon={};gon.features={"highlightJsWorker":false,"explainCodeChat":false};
+//]]>
+</script>
+
+<script>
+//<![CDATA[
+var gl = window.gl || {};
+gl.startup_calls = null;
+gl.startup_graphql_calls = [{"query":"query getBlobInfo(\n  $projectPath: ID!\n  $filePath: String!\n  $ref: String!\n  $refType: RefType\n  $shouldFetchRawText: Boolean!\n) {\n  project(fullPath: $projectPath) {\n    __typename\n    id\n    repository {\n      __typename\n      empty\n      blobs(paths: [$filePath], ref: $ref, refType: $refType) {\n        __typename\n        nodes {\n          __typename\n          id\n          webPath\n          name\n          size\n          rawSize\n          rawTextBlob @include(if: $shouldFetchRawText)\n          fileType\n          language\n          path\n          blamePath\n          editBlobPath\n          gitpodBlobUrl\n          ideEditPath\n          forkAndEditPath\n          ideForkAndEditPath\n          codeNavigationPath\n          projectBlobPathRoot\n          forkAndViewPath\n          environmentFormattedExternalUrl\n          environmentExternalUrlForRouteMap\n          canModifyBlob\n          canCurrentUserPushToBranch\n          archived\n          storedExternally\n          externalStorage\n          externalStorageUrl\n          rawPath\n          replacePath\n          pipelineEditorPath\n          simpleViewer {\n            fileType\n            tooLarge\n            type\n            renderError\n          }\n          richViewer {\n            fileType\n            tooLarge\n            type\n            renderError\n          }\n        }\n      }\n    }\n  }\n}\n","variables":{"projectPath":"Neil-Firmware-Dumps/google/tangorpro","ref":"tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085","refType":"","filePath":"vendor/lib/soundfx/libspatialaudio.so","shouldFetchRawText":false}}];
+
+if (gl.startup_calls && window.fetch) {
+  Object.keys(gl.startup_calls).forEach(apiCall => {
+   gl.startup_calls[apiCall] = {
+      fetchCall: fetch(apiCall, {
+        // Emulate XHR for Rails AJAX request checks
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        // fetch won’t send cookies in older browsers, unless you set the credentials init option.
+        // We set to `same-origin` which is default value in modern browsers.
+        // See https://github.com/whatwg/fetch/pull/585 for more information.
+        credentials: 'same-origin'
+      })
+    };
+  });
+}
+if (gl.startup_graphql_calls && window.fetch) {
+  const headers = {"X-CSRF-Token":"gEghpaXPdkZIY5r9F5YrVbXetkwuNPhIeXc7dGBNQoLvhBbgkmMdLgiFpzerFmmcchmbREXLxnrQwvqVbfN9tw","x-gitlab-feature-category":"source_code_management"};
+  const url = `https://www.opencode.net/api/graphql`
+
+  const opts = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...headers,
+    }
+  };
+
+  gl.startup_graphql_calls = gl.startup_graphql_calls.map(call => ({
+    ...call,
+    fetchCall: fetch(url, {
+      ...opts,
+      credentials: 'same-origin',
+      body: JSON.stringify(call)
+    })
+  }))
+}
+
+
+//]]>
+</script>
+
+<link rel="prefetch" href="/assets/webpack/monaco.dd17820e.chunk.js">
+<link rel="stylesheet" href="/assets/themes/theme_light_gray-3709fdfdb1600922d90063efdcf592c5e03aeccf4bfff84771ee72cd6ea73a58.css" />
+
+<link rel="stylesheet" href="/assets/application-e803bb812a5c601a017cbfaa6d442b51c869a084d04a0e2b77dfee19959bc000.css" media="all" />
+<link rel="stylesheet" href="/assets/page_bundles/tree-7eb97b0bf23760737864cc9c5cd5c9f23c3de24178d1b9393cea9f64caca3bcd.css" media="all" />
+<link rel="stylesheet" href="/assets/application_utilities-2531e4e6ef42e4af0a1b836590e0b362055984d2fa233ae3c5b07d7c4a2761fd.css" media="all" />
+
+
+<link rel="stylesheet" href="/assets/fonts-171e1863d044918ea3bbaacf2a559ccaac603904aa851c3add5b714fa7066468.css" media="all" />
+<link rel="stylesheet" href="/assets/highlight/themes/white-0163ec1ff3033e0ebaf2e7700680941596e39d73535518445a42947430b7d452.css" media="all" />
+
+
+<link rel="preload" href="/assets/application_utilities-2531e4e6ef42e4af0a1b836590e0b362055984d2fa233ae3c5b07d7c4a2761fd.css" as="style" type="text/css">
+<link rel="preload" href="/assets/application-e803bb812a5c601a017cbfaa6d442b51c869a084d04a0e2b77dfee19959bc000.css" as="style" type="text/css">
+<link rel="preload" href="/assets/highlight/themes/white-0163ec1ff3033e0ebaf2e7700680941596e39d73535518445a42947430b7d452.css" as="style" type="text/css">
+
+
+
+
+
+
+<script src="/assets/webpack/runtime.e9762d44.bundle.js" defer="defer"></script>
+<script src="/assets/webpack/main.e52492d6.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/graphql.4f7311f8.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/shortcutsBundle.97b9d1d2.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.groups.boards-pages.groups.details-pages.groups.show-pages.projects-pages.projects.act-f342ac1d.5500a430.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.admin.application_settings-pages.admin.application_settings.ci_cd-pages.admin.applicat-20fae03e.679c0629.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.admin.runners.show-pages.groups.achievements-pages.groups.crm.contacts-pages.groups.cr-556468c7.e6aae721.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.show-pages.projects.snippets.show-pages.projects.tre-c684fcf6.ba634d17.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.forks.new-pages.projects.show-pages.projects.tree.show.0fec036f.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.groups.show-pages.projects.blob.show-pages.projects.show-pages.projects.tree.show.5b3dfc72.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.show-pages.projects.tree.show.fbc8f18c.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/commons-pages.projects.blob.show-pages.projects.tree.show-treeList.7494d591.chunk.js" defer="defer"></script>
+<script src="/assets/webpack/pages.projects.blob.show.4e8479b1.chunk.js" defer="defer"></script>
+<meta content="object" property="og:type">
+<meta content="GitLab" property="og:site_name">
+<meta content="vendor/lib/soundfx/libspatialaudio.so · tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085 · Neil Firmware Dumps / google / tangorpro · GitLab" property="og:title">
+<meta content="opencode.net - For the code we love." property="og:description">
+<meta content="https://www.opencode.net/assets/twitter_card-570ddb06edf56a2312253c5872489847a0f385112ddbcd71ccfa1570febab5d2.jpg" property="og:image">
+<meta content="64" property="og:image:width">
+<meta content="64" property="og:image:height">
+<meta content="https://www.opencode.net/Neil-Firmware-Dumps/google/tangorpro/-/blob/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085/vendor/lib/soundfx/libspatialaudio.so" property="og:url">
+<meta content="summary" property="twitter:card">
+<meta content="vendor/lib/soundfx/libspatialaudio.so · tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085 · Neil Firmware Dumps / google / tangorpro · GitLab" property="twitter:title">
+<meta content="opencode.net - For the code we love." property="twitter:description">
+<meta content="https://www.opencode.net/assets/twitter_card-570ddb06edf56a2312253c5872489847a0f385112ddbcd71ccfa1570febab5d2.jpg" property="twitter:image">
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="v3XOrJwI7D0TgdOI-IWqJV98t6Jiv_21MW8-gRD9TjLQufnpq6SHVVNn7kJEBejsmLuaqglAw4eY2v9gHUNxBw" />
+<meta name="csp-nonce" />
+<meta name="action-cable-url" content="/-/cable" />
+<link href="/-/manifest.json" rel="manifest">
+<link rel="icon" type="image/png" href="/uploads/-/system/appearance/favicon/1/opencode-logo.png" id="favicon" data-original-href="/uploads/-/system/appearance/favicon/1/opencode-logo.png" />
+<link rel="apple-touch-icon" type="image/x-icon" href="/assets/apple-touch-icon-b049d4bc0dd9626f31db825d61880737befc7835982586d015bded10b4435460.png" />
+<link href="/search/opensearch.xml" rel="search" title="Search GitLab" type="application/opensearchdescription+xml">
+
+
+
+
+<meta content="opencode.net - For the code we love." name="description">
+<meta content="#ececef" name="theme-color">
+
+<link rel="stylesheet" media="all" href="https://www.opencode.net/assets/custom.css" />
+<script src="https://www.opencode.net/assets/custom.js"></script>
+</head>
+
+<body class="ui-light-gray tab-width-8 gl-browser-generic gl-platform-other" data-find-file="/Neil-Firmware-Dumps/google/tangorpro/-/find_file/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085" data-group="google" data-group-full-path="Neil-Firmware-Dumps/google" data-namespace-id="279516" data-page="projects:blob:show" data-page-type-id="tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085/vendor/lib/soundfx/libspatialaudio.so" data-project="tangorpro" data-project-id="4003">
+
+<script>
+//<![CDATA[
+gl = window.gl || {};
+gl.client = {"isGeneric":true,"isOther":true};
+
+
+//]]>
+</script>
+
+
+
+<header class="navbar navbar-gitlab navbar-expand-sm js-navbar legacy-top-bar" data-testid="navbar">
+<a class="gl-sr-only gl-accessibility" href="#content-body">Skip to content</a>
+<div class="container-fluid">
+<div class="header-content js-header-content">
+<div class="title-container hide-when-top-nav-responsive-open gl-transition-medium gl-display-flex gl-align-items-stretch gl-pt-0 gl-mr-3">
+<div class="title">
+<span class="gl-sr-only">GitLab</span>
+<a title="Homepage" id="logo" class="has-tooltip" href="/"><img class="brand-header-logo lazy" data-src="/uploads/-/system/appearance/header_logo/1/opencode-logo.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+</a><div class="gl-display-flex gl-align-items-center">
+</div>
+</div>
+
+<div class="gl-display-none gl-sm-display-block">
+<ul class="list-unstyled nav navbar-sub-nav" data-view-model="{&quot;primary&quot;:[{&quot;type&quot;:&quot;header&quot;,&quot;title&quot;:&quot;Explore&quot;},{&quot;id&quot;:&quot;project&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Projects&quot;,&quot;active&quot;:true,&quot;icon&quot;:&quot;project&quot;,&quot;href&quot;:&quot;/explore&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:null,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Projects&quot;},&quot;partial&quot;:null,&quot;component&quot;:null},{&quot;id&quot;:&quot;groups&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Groups&quot;,&quot;active&quot;:false,&quot;icon&quot;:&quot;group&quot;,&quot;href&quot;:&quot;/explore/groups&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:null,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Groups&quot;},&quot;partial&quot;:null,&quot;component&quot;:null},{&quot;id&quot;:&quot;topics&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Topics&quot;,&quot;active&quot;:false,&quot;icon&quot;:&quot;labels&quot;,&quot;href&quot;:&quot;/explore/projects/topics&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:null,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Topics&quot;},&quot;partial&quot;:null,&quot;component&quot;:null},{&quot;id&quot;:&quot;snippets&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Snippets&quot;,&quot;active&quot;:false,&quot;icon&quot;:&quot;snippet&quot;,&quot;href&quot;:&quot;/explore/snippets&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:null,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Snippets&quot;},&quot;partial&quot;:null,&quot;component&quot;:null}],&quot;secondary&quot;:[],&quot;views&quot;:{},&quot;shortcuts&quot;:[{&quot;id&quot;:&quot;project-shortcut&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Projects&quot;,&quot;active&quot;:false,&quot;icon&quot;:&quot;&quot;,&quot;href&quot;:&quot;/explore&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-projects&quot;,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Projects&quot;},&quot;partial&quot;:null,&quot;component&quot;:null},{&quot;id&quot;:&quot;groups-shortcut&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Groups&quot;,&quot;active&quot;:false,&quot;icon&quot;:&quot;&quot;,&quot;href&quot;:&quot;/explore/groups&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-groups&quot;,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Groups&quot;},&quot;partial&quot;:null,&quot;component&quot;:null},{&quot;id&quot;:&quot;topics-shortcut&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Topics&quot;,&quot;active&quot;:false,&quot;icon&quot;:&quot;&quot;,&quot;href&quot;:&quot;/explore/projects/topics&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-topics&quot;,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Topics&quot;},&quot;partial&quot;:null,&quot;component&quot;:null},{&quot;id&quot;:&quot;snippets-shortcut&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Snippets&quot;,&quot;active&quot;:false,&quot;icon&quot;:&quot;&quot;,&quot;href&quot;:&quot;/explore/snippets&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-snippets&quot;,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Snippets&quot;},&quot;partial&quot;:null,&quot;component&quot;:null}],&quot;menuTooltip&quot;:&quot;Main menu&quot;}" id="js-top-nav">
+<li>
+<a class="top-nav-toggle" data-toggle="dropdown" href="#" type="button">
+<svg class="s16" data-testid="hamburger-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#hamburger"></use></svg>
+</a>
+</li>
+</ul>
+<div class="hidden">
+<a class="dashboard-shortcuts-projects" href="/explore">Projects
+</a><a class="dashboard-shortcuts-groups" href="/explore/groups">Groups
+</a><a class="dashboard-shortcuts-topics" href="/explore/projects/topics">Topics
+</a><a class="dashboard-shortcuts-snippets" href="/explore/snippets">Snippets
+</a></div>
+
+</div>
+</div>
+<div class="navbar-collapse gl-transition-medium collapse gl-mr-auto global-search-container hide-when-top-nav-responsive-open">
+<ul class="nav navbar-nav gl-w-full gl-align-items-center">
+<li class="nav-item header-search gl-display-none gl-lg-display-block gl-w-full">
+<div class="header-search-form is-not-active gl-relative gl-w-full" data-autocomplete-path="/search/autocomplete" data-issues-path="/dashboard/issues" data-mr-path="/dashboard/merge_requests" data-search-context="{&quot;group&quot;:{&quot;id&quot;:279516,&quot;name&quot;:&quot;google&quot;,&quot;full_name&quot;:&quot;Neil Firmware Dumps / google&quot;},&quot;group_metadata&quot;:{&quot;issues_path&quot;:&quot;/groups/Neil-Firmware-Dumps/google/-/issues&quot;,&quot;mr_path&quot;:&quot;/groups/Neil-Firmware-Dumps/google/-/merge_requests&quot;},&quot;project&quot;:{&quot;id&quot;:4003,&quot;name&quot;:&quot;tangorpro&quot;},&quot;project_metadata&quot;:{&quot;mr_path&quot;:&quot;/Neil-Firmware-Dumps/google/tangorpro/-/merge_requests&quot;,&quot;issues_path&quot;:&quot;/Neil-Firmware-Dumps/google/tangorpro/-/issues&quot;},&quot;code_search&quot;:true,&quot;ref&quot;:&quot;tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085&quot;,&quot;scope&quot;:null,&quot;for_snippets&quot;:null}" data-search-path="/search" id="js-header-search">
+<form action="/search" accept-charset="UTF-8" method="get"><div class="gl-search-box-by-type">
+<svg class="s16 gl-search-box-by-type-search-icon gl-icon" data-testid="search-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#search"></use></svg>
+<input autocomplete="off" class="form-control gl-form-input gl-search-box-by-type-input" data-testid="search_box" id="search" name="search" placeholder="Search GitLab" type="text">
+</div>
+<input type="hidden" name="group_id" id="group_id" value="279516" autocomplete="off" />
+<input type="hidden" name="project_id" id="project_id" value="4003" autocomplete="off" />
+<input type="hidden" name="scope" id="scope" autocomplete="off" />
+<input type="hidden" name="search_code" id="search_code" value="true" autocomplete="off" />
+<input type="hidden" name="snippets" id="snippets" autocomplete="off" />
+<input type="hidden" name="repository_ref" id="repository_ref" value="tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085" autocomplete="off" />
+<input type="hidden" name="nav_source" id="nav_source" value="navbar" autocomplete="off" />
+<kbd class="gl-absolute gl-right-3 gl-top-0 keyboard-shortcut-helper gl-z-index-1 has-tooltip" data-html="true" data-placement="bottom" title="Use the shortcut key &lt;kbd&gt;/&lt;/kbd&gt; to start a search">
+/
+</kbd>
+</form></div>
+
+</li>
+<li class="nav-item d-none d-sm-inline-block d-lg-none">
+<a title="Search" aria-label="Search" data-toggle="tooltip" data-placement="bottom" data-container="body" data-track-action="click_link" data-track-label="global_search" data-track-property="navigation_top" href="/search?project_id=4003"><svg class="s16" data-testid="search-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#search"></use></svg>
+</a></li>
+</ul>
+</div>
+<div class="navbar-collapse gl-transition-medium collapse">
+<ul class="nav navbar-nav gl-w-full gl-align-items-center gl-justify-content-end">
+<li class="nav-item header-help dropdown d-none d-md-block">
+<a class="header-help-dropdown-toggle gl-relative" data-toggle="dropdown" data-track-action="click_question_mark_link" data-track-label="main_navigation" data-track-property="navigation_top" href="/help"><span class="gl-sr-only">
+Help
+</span>
+<svg class="s16" data-testid="question-o-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#question-o"></use></svg>
+<span class="notification-dot rounded-circle gl-absolute"></span>
+<svg class="s16 caret-down" data-testid="chevron-down-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#chevron-down"></use></svg>
+</a><div class="dropdown-menu dropdown-menu-right">
+<ul>
+<li>
+
+</li>
+
+<li>
+<a data-track-action="click_link" data-track-label="help" data-track-property="navigation_top" href="/help">Help</a>
+</li>
+<li>
+<a data-track-action="click_link" data-track-label="support" data-track-property="navigation_top" href="https://about.gitlab.com/get-help/">Support</a>
+</li>
+<li>
+<a target="_blank" class="text-nowrap" rel="noopener noreferrer" data-track-action="click_link" data-track-label="community_forum" data-track-property="navigation_top" href="https://forum.gitlab.com">Community forum</a>
+
+</li>
+<li>
+<button class="js-shortcuts-modal-trigger" data-track-action="click_button" data-track-label="keyboard_shortcuts_help" data-track-property="navigation_top" type="button">
+Keyboard shortcuts
+<kbd aria-hidden="true" class="flat float-right">?</kbd>
+</button>
+</li>
+<li class="divider"></li>
+<li>
+<a data-track-action="click_link" data-track-label="submit_feedback" data-track-property="navigation_top" href="https://about.gitlab.com/submit-feedback">Submit feedback</a>
+</li>
+<li>
+<a target="_blank" class="text-nowrap" data-track-action="click_link" data-track-label="contribute_to_gitlab" data-track-property="navigation_top" href="https://about.gitlab.com/contributing">Contribute to GitLab
+</a>
+</li>
+
+</ul>
+
+</div>
+</li>
+<li class="nav-item gl-flex-grow-0! gl-flex-basis-half!">
+<a href="/users/sign_in?redirect_to_referer=yes">Sign in</a>
+</li>
+</ul>
+</div>
+<button class="navbar-toggler d-block d-sm-none gl-border-none!" data-testid="mobile_navbar_button" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="more-icon gl-px-3 gl-font-sm gl-font-weight-bold">
+<span class="gl-pr-2">Menu</span>
+<svg class="s16" data-testid="hamburger-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#hamburger"></use></svg>
+</span>
+<svg class="s12 close-icon" data-testid="close-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#close"></use></svg>
+</button>
+</div>
+</div>
+</header>
+
+<div class="layout-page hide-when-top-nav-responsive-open page-with-contextual-sidebar">
+<aside aria-label="Project navigation" class="nav-sidebar">
+<div class="nav-sidebar-inner-scroll">
+<ul class="sidebar-top-level-items" data-testid="project_sidebar">
+<li data-track-label="scope_menu" data-container="body" data-placement="right" class="context-header has-tooltip" title="tangorpro"><a aria-label="tangorpro" class="shortcuts-project rspec-project-link gl-link" data-qa-selector="sidebar_menu_link" data-qa-menu-item="Project scope" href="/Neil-Firmware-Dumps/google/tangorpro"><span class="avatar-container rect-avatar s32 project_avatar">
+<span class="avatar avatar-tile s32 identicon bg7">T</span>
+</span>
+<span class="sidebar-context-title">
+tangorpro
+</span>
+</a></li>
+<li data-track-label="project_information_menu" class="home"><a aria-label="Project information" class="shortcuts-project-information has-sub-items gl-link" data-testid="sidebar_menu_link" data-qa-menu-item="Project information" href="/Neil-Firmware-Dumps/google/tangorpro/activity"><span class="nav-icon-container">
+<svg class="s16" data-testid="project-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#project"></use></svg>
+</span>
+<span class="nav-item-name">
+Project information
+</span>
+</a><ul class="sidebar-sub-level-items">
+<li class="fly-out-top-item"><span class="fly-out-top-item-container">
+<strong class="fly-out-top-item-name">
+Project information
+</strong>
+</span>
+</li><li class="divider fly-out-top-item"></li>
+<li data-track-label="activity" class=""><a aria-label="Activity" class="shortcuts-project-activity gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Activity" href="/Neil-Firmware-Dumps/google/tangorpro/activity"><span class="gl-flex-grow-1">
+Activity
+</span>
+</a></li><li data-track-label="labels" class=""><a aria-label="Labels" class="gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Labels" href="/Neil-Firmware-Dumps/google/tangorpro/-/labels"><span class="gl-flex-grow-1">
+Labels
+</span>
+</a></li><li data-track-label="members" class=""><a aria-label="Members" id="js-onboarding-members-link" class="gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Members" href="/Neil-Firmware-Dumps/google/tangorpro/-/project_members"><span class="gl-flex-grow-1">
+Members
+</span>
+</a></li>
+</ul>
+
+</li><li data-track-label="repository_menu" class="active"><a aria-label="Repository" class="shortcuts-tree has-sub-items gl-link" data-testid="sidebar_menu_link" data-qa-menu-item="Repository" href="/Neil-Firmware-Dumps/google/tangorpro/-/tree/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085"><span class="nav-icon-container">
+<svg class="s16" data-testid="doc-text-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#doc-text"></use></svg>
+</span>
+<span class="nav-item-name" id="js-onboarding-repo-link">
+Repository
+</span>
+</a><ul class="sidebar-sub-level-items">
+<li class="fly-out-top-item active"><span class="fly-out-top-item-container">
+<strong class="fly-out-top-item-name">
+Repository
+</strong>
+</span>
+</li><li class="divider fly-out-top-item"></li>
+<li data-track-label="files" class="active"><a aria-label="Files" class="shortcuts-tree gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Files" href="/Neil-Firmware-Dumps/google/tangorpro/-/tree/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085"><span class="gl-flex-grow-1">
+Files
+</span>
+</a></li><li data-track-label="commits" class=""><a aria-label="Commits" id="js-onboarding-commits-link" class="shortcuts-commits gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Commits" href="/Neil-Firmware-Dumps/google/tangorpro/-/commits/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085?ref_type=heads"><span class="gl-flex-grow-1">
+Commits
+</span>
+</a></li><li data-track-label="branches" class=""><a aria-label="Branches" id="js-onboarding-branches-link" class="gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Branches" href="/Neil-Firmware-Dumps/google/tangorpro/-/branches"><span class="gl-flex-grow-1">
+Branches
+</span>
+</a></li><li data-track-label="tags" class=""><a aria-label="Tags" class="gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Tags" href="/Neil-Firmware-Dumps/google/tangorpro/-/tags"><span class="gl-flex-grow-1">
+Tags
+</span>
+</a></li><li data-track-label="contributors" class=""><a aria-label="Contributor statistics" class="gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Contributor statistics" href="/Neil-Firmware-Dumps/google/tangorpro/-/graphs/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085?ref_type=heads"><span class="gl-flex-grow-1">
+Contributor statistics
+</span>
+</a></li><li data-track-label="graphs" class=""><a aria-label="Graph" class="shortcuts-network gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Graph" href="/Neil-Firmware-Dumps/google/tangorpro/-/network/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085?ref_type=heads"><span class="gl-flex-grow-1">
+Graph
+</span>
+</a></li><li data-track-label="compare" class=""><a aria-label="Compare revisions" class="gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Compare revisions" href="/Neil-Firmware-Dumps/google/tangorpro/-/compare?from=tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085&amp;to=tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085"><span class="gl-flex-grow-1">
+Compare revisions
+</span>
+</a></li>
+</ul>
+
+</li><li data-track-label="issues_menu" class=""><a aria-label="Issues" class="shortcuts-issues has-sub-items gl-link" data-testid="sidebar_menu_link" data-qa-menu-item="Issues" href="/Neil-Firmware-Dumps/google/tangorpro/-/issues"><span class="nav-icon-container">
+<svg class="s16" data-testid="issues-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#issues"></use></svg>
+</span>
+<span class="nav-item-name" id="js-onboarding-issues-link">
+Issues
+</span>
+<span class="gl-badge badge badge-pill badge-info sm count issue_counter">0
+</span></a><ul class="sidebar-sub-level-items">
+<li class="fly-out-top-item"><span class="fly-out-top-item-container">
+<strong class="fly-out-top-item-name">
+Issues
+</strong>
+<span class="gl-badge badge badge-pill badge-info sm count fly-out-badge issue_counter">0
+</span></span>
+</li><li class="divider fly-out-top-item"></li>
+<li data-track-label="issue_list" class=""><a aria-label="Issues" class="gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="List" href="/Neil-Firmware-Dumps/google/tangorpro/-/issues"><span class="gl-flex-grow-1">
+List
+</span>
+</a></li><li data-track-label="boards" class=""><a aria-label="Boards" class="shortcuts-issue-boards gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Boards" href="/Neil-Firmware-Dumps/google/tangorpro/-/boards"><span class="gl-flex-grow-1">
+Boards
+</span>
+</a></li><li data-track-label="service_desk" class=""><a aria-label="Service Desk" class="gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Service Desk" href="/Neil-Firmware-Dumps/google/tangorpro/-/issues/service_desk"><span class="gl-flex-grow-1">
+Service Desk
+</span>
+</a></li><li data-track-label="milestones" class=""><a aria-label="Milestones" class="gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Milestones" href="/Neil-Firmware-Dumps/google/tangorpro/-/milestones"><span class="gl-flex-grow-1">
+Milestones
+</span>
+</a></li>
+</ul>
+
+</li><li data-track-label="merge_requests_menu" class=""><a aria-label="Merge requests" class="shortcuts-merge_requests gl-link" data-testid="sidebar_menu_link" data-qa-menu-item="Merge requests" href="/Neil-Firmware-Dumps/google/tangorpro/-/merge_requests"><span class="nav-icon-container">
+<svg class="s16" data-testid="git-merge-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#git-merge"></use></svg>
+</span>
+<span class="nav-item-name" id="js-onboarding-mr-link">
+Merge requests
+</span>
+<span class="gl-badge badge badge-pill badge-info sm count merge_counter js-merge-counter">0
+</span></a><ul class="sidebar-sub-level-items is-fly-out-only">
+<li class="fly-out-top-item"><span class="fly-out-top-item-container">
+<strong class="fly-out-top-item-name">
+Merge requests
+</strong>
+<span class="gl-badge badge badge-pill badge-info sm count fly-out-badge merge_counter js-merge-counter">0
+</span></span>
+</li></ul>
+
+</li><li data-track-label="ci_cd_menu" class=""><a aria-label="CI/CD" class="shortcuts-pipelines rspec-link-pipelines has-sub-items gl-link" data-testid="sidebar_menu_link" data-qa-menu-item="CI/CD" href="/Neil-Firmware-Dumps/google/tangorpro/-/pipelines"><span class="nav-icon-container">
+<svg class="s16" data-testid="rocket-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#rocket"></use></svg>
+</span>
+<span class="nav-item-name" id="js-onboarding-pipelines-link">
+CI/CD
+</span>
+</a><ul class="sidebar-sub-level-items">
+<li class="fly-out-top-item"><span class="fly-out-top-item-container">
+<strong class="fly-out-top-item-name">
+CI/CD
+</strong>
+</span>
+</li><li class="divider fly-out-top-item"></li>
+<li data-track-label="pipelines" class=""><a aria-label="Pipelines" class="shortcuts-pipelines gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Pipelines" href="/Neil-Firmware-Dumps/google/tangorpro/-/pipelines"><span class="gl-flex-grow-1">
+Pipelines
+</span>
+</a></li><li data-track-label="jobs" class=""><a aria-label="Jobs" class="shortcuts-builds gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Jobs" href="/Neil-Firmware-Dumps/google/tangorpro/-/jobs"><span class="gl-flex-grow-1">
+Jobs
+</span>
+</a></li><li data-track-label="artifacts" class=""><a aria-label="Artifacts" class="shortcuts-builds gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Artifacts" href="/Neil-Firmware-Dumps/google/tangorpro/-/artifacts"><span class="gl-flex-grow-1">
+Artifacts
+</span>
+</a></li><li data-track-label="pipeline_schedules" class=""><a aria-label="Schedules" class="shortcuts-builds gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Schedules" href="/Neil-Firmware-Dumps/google/tangorpro/-/pipeline_schedules"><span class="gl-flex-grow-1">
+Schedules
+</span>
+</a></li>
+</ul>
+
+</li><li data-track-label="deployments_menu" class=""><a aria-label="Deployments" class="shortcuts-deployments has-sub-items gl-link" data-testid="sidebar_menu_link" data-qa-menu-item="Deployments" href="/Neil-Firmware-Dumps/google/tangorpro/-/environments"><span class="nav-icon-container">
+<svg class="s16" data-testid="deployments-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#deployments"></use></svg>
+</span>
+<span class="nav-item-name">
+Deployments
+</span>
+</a><ul class="sidebar-sub-level-items">
+<li class="fly-out-top-item"><span class="fly-out-top-item-container">
+<strong class="fly-out-top-item-name">
+Deployments
+</strong>
+</span>
+</li><li class="divider fly-out-top-item"></li>
+<li data-track-label="environments" class=""><a aria-label="Environments" class="shortcuts-environments gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Environments" href="/Neil-Firmware-Dumps/google/tangorpro/-/environments"><span class="gl-flex-grow-1">
+Environments
+</span>
+</a></li><li data-track-label="releases" class=""><a aria-label="Releases" class="shortcuts-deployments-releases gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Releases" href="/Neil-Firmware-Dumps/google/tangorpro/-/releases"><span class="gl-flex-grow-1">
+Releases
+</span>
+</a></li>
+</ul>
+
+</li><li data-track-label="packages_registries_menu" class=""><a aria-label="Packages and registries" class="has-sub-items gl-link" data-testid="sidebar_menu_link" data-qa-menu-item="Packages and registries" href="/Neil-Firmware-Dumps/google/tangorpro/-/packages"><span class="nav-icon-container">
+<svg class="s16" data-testid="package-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#package"></use></svg>
+</span>
+<span class="nav-item-name">
+Packages and registries
+</span>
+</a><ul class="sidebar-sub-level-items">
+<li class="fly-out-top-item"><span class="fly-out-top-item-container">
+<strong class="fly-out-top-item-name">
+Packages and registries
+</strong>
+</span>
+</li><li class="divider fly-out-top-item"></li>
+<li data-track-label="packages_registry" class=""><a aria-label="Package Registry" class="shortcuts-container-registry gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Package Registry" href="/Neil-Firmware-Dumps/google/tangorpro/-/packages"><span class="gl-flex-grow-1">
+Package Registry
+</span>
+</a></li><li data-track-label="infrastructure_registry" class=""><a aria-label="Terraform modules" class="gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Terraform modules" href="/Neil-Firmware-Dumps/google/tangorpro/-/infrastructure_registry"><span class="gl-flex-grow-1">
+Terraform modules
+</span>
+</a></li><li data-track-label="model_experiments" class=""><a aria-label="Model experiments" class="gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Model experiments" href="/Neil-Firmware-Dumps/google/tangorpro/-/ml/experiments"><span class="gl-flex-grow-1">
+Model experiments
+</span>
+</a></li>
+</ul>
+
+</li><li data-track-label="monitor_menu" class=""><a aria-label="Monitor" class="shortcuts-monitor has-sub-items gl-link" data-testid="sidebar_menu_link" data-qa-menu-item="Monitor" href="/Neil-Firmware-Dumps/google/tangorpro/-/incidents"><span class="nav-icon-container">
+<svg class="s16" data-testid="monitor-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#monitor"></use></svg>
+</span>
+<span class="nav-item-name">
+Monitor
+</span>
+</a><ul class="sidebar-sub-level-items">
+<li class="fly-out-top-item"><span class="fly-out-top-item-container">
+<strong class="fly-out-top-item-name">
+Monitor
+</strong>
+</span>
+</li><li class="divider fly-out-top-item"></li>
+<li data-track-label="incidents" class=""><a aria-label="Incidents" class="gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Incidents" href="/Neil-Firmware-Dumps/google/tangorpro/-/incidents"><span class="gl-flex-grow-1">
+Incidents
+</span>
+</a></li>
+</ul>
+
+</li><li data-track-label="analytics_menu" class=""><a aria-label="Analytics" class="shortcuts-analytics has-sub-items gl-link" data-testid="sidebar_menu_link" data-qa-menu-item="Analytics" href="/Neil-Firmware-Dumps/google/tangorpro/-/value_stream_analytics"><span class="nav-icon-container">
+<svg class="s16" data-testid="chart-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#chart"></use></svg>
+</span>
+<span class="nav-item-name">
+Analytics
+</span>
+</a><ul class="sidebar-sub-level-items">
+<li class="fly-out-top-item"><span class="fly-out-top-item-container">
+<strong class="fly-out-top-item-name">
+Analytics
+</strong>
+</span>
+</li><li class="divider fly-out-top-item"></li>
+<li data-track-label="cycle_analytics" class=""><a aria-label="Value stream" class="shortcuts-project-cycle-analytics gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Value stream" href="/Neil-Firmware-Dumps/google/tangorpro/-/value_stream_analytics"><span class="gl-flex-grow-1">
+Value stream
+</span>
+</a></li><li data-track-label="ci_cd_analytics" class=""><a aria-label="CI/CD" class="gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="CI/CD" href="/Neil-Firmware-Dumps/google/tangorpro/-/pipelines/charts"><span class="gl-flex-grow-1">
+CI/CD
+</span>
+</a></li><li data-track-label="repository_analytics" class=""><a aria-label="Repository" class="shortcuts-repository-charts gl-link" data-testid="sidebar_menu_item_link" data-qa-menu-item="Repository" href="/Neil-Firmware-Dumps/google/tangorpro/-/graphs/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085/charts"><span class="gl-flex-grow-1">
+Repository
+</span>
+</a></li>
+</ul>
+
+</li><li data-track-label="wiki_menu" class=""><a aria-label="Wiki" class="shortcuts-wiki gl-link" data-testid="sidebar_menu_link" data-qa-menu-item="Wiki" href="/Neil-Firmware-Dumps/google/tangorpro/-/wikis/home"><span class="nav-icon-container">
+<svg class="s16" data-testid="book-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#book"></use></svg>
+</span>
+<span class="nav-item-name">
+Wiki
+</span>
+</a><ul class="sidebar-sub-level-items is-fly-out-only">
+<li class="fly-out-top-item"><span class="fly-out-top-item-container">
+<strong class="fly-out-top-item-name">
+Wiki
+</strong>
+</span>
+</li></ul>
+
+</li><li data-track-label="snippets_menu" class=""><a aria-label="Snippets" class="shortcuts-snippets gl-link" data-testid="sidebar_menu_link" data-qa-menu-item="Snippets" href="/Neil-Firmware-Dumps/google/tangorpro/-/snippets"><span class="nav-icon-container">
+<svg class="s16" data-testid="snippet-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#snippet"></use></svg>
+</span>
+<span class="nav-item-name">
+Snippets
+</span>
+</a><ul class="sidebar-sub-level-items is-fly-out-only">
+<li class="fly-out-top-item"><span class="fly-out-top-item-container">
+<strong class="fly-out-top-item-name">
+Snippets
+</strong>
+</span>
+</li></ul>
+
+</li>
+<li class="hidden">
+<a aria-label="Activity" class="shortcuts-project-activity gl-link" href="/Neil-Firmware-Dumps/google/tangorpro/activity">Activity
+</a></li>
+<li class="hidden">
+<a aria-label="Graph" class="shortcuts-network gl-link" href="/Neil-Firmware-Dumps/google/tangorpro/-/network/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085">Graph
+</a></li>
+<li class="hidden">
+<a aria-label="Create a new issue" class="shortcuts-new-issue gl-link" href="/Neil-Firmware-Dumps/google/tangorpro/-/issues/new">Create a new issue
+</a></li>
+<li class="hidden">
+<a aria-label="Jobs" class="shortcuts-builds gl-link" href="/Neil-Firmware-Dumps/google/tangorpro/-/jobs">Jobs
+</a></li>
+<li class="hidden">
+<a aria-label="Commits" class="shortcuts-commits gl-link" href="/Neil-Firmware-Dumps/google/tangorpro/-/commits/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085">Commits
+</a></li>
+<li class="hidden">
+<a aria-label="Issue Boards" class="shortcuts-issue-boards gl-link" href="/Neil-Firmware-Dumps/google/tangorpro/-/boards">Issue Boards
+</a></li>
+
+</ul>
+<a class="toggle-sidebar-button js-toggle-sidebar rspec-toggle-sidebar" role="button" title="Toggle sidebar" type="button">
+<svg class="s12 icon-chevron-double-lg-left" data-testid="chevron-double-lg-left-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#chevron-double-lg-left"></use></svg>
+<span class="collapse-text gl-ml-3">Collapse sidebar</span>
+</a>
+<button name="button" type="button" class="close-nav-button"><svg class="s16" data-testid="close-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#close"></use></svg>
+<span class="collapse-text gl-ml-3">Close sidebar</span>
+</button>
+</div>
+</aside>
+
+
+<div class="content-wrapper">
+<div class="mobile-overlay"></div>
+
+<div class="alert-wrapper gl-force-block-formatting-context">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid container-limited project-highlight-puc" data-testid="top-bar">
+<div class="top-bar-container gl-display-flex gl-align-items-center gl-gap-2 gl-border-b">
+<button class="gl-button btn btn-icon btn-md btn-default btn-default-tertiary toggle-mobile-nav gl-ml-n3" data-testid="toggle_mobile_nav_button" aria-label="Open sidebar" type="button"><svg class="s16 gl-icon gl-button-icon " data-testid="sidebar-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#sidebar"></use></svg>
+
+</button>
+<nav aria-label="Breadcrumbs" class="breadcrumbs" data-qa-selector="breadcrumb_links_content" data-testid="breadcrumb-links">
+<ul class="list-unstyled breadcrumbs-list js-breadcrumbs-list">
+<li><a class="group-path breadcrumb-item-text js-breadcrumb-item-text " href="/Neil-Firmware-Dumps"><img alt="Neil Firmware Dumps" class="avatar-tile lazy" width="15" height="15" data-src="/uploads/-/system/group/avatar/267615/106647156.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />Neil Firmware Dumps</a><svg class="s8 breadcrumbs-list-angle" data-testid="chevron-lg-right-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#chevron-lg-right"></use></svg></li><li><a class="group-path breadcrumb-item-text js-breadcrumb-item-text " href="/Neil-Firmware-Dumps/google">google</a><svg class="s8 breadcrumbs-list-angle" data-testid="chevron-lg-right-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#chevron-lg-right"></use></svg></li> <li><a href="/Neil-Firmware-Dumps/google/tangorpro"><span class="breadcrumb-item-text js-breadcrumb-item-text">tangorpro</span></a><svg class="s8 breadcrumbs-list-angle" data-testid="chevron-lg-right-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#chevron-lg-right"></use></svg></li>
+
+<li data-qa-selector="breadcrumb_current_link" data-testid="breadcrumb-current-link">
+<a href="/Neil-Firmware-Dumps/google/tangorpro/-/blob/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085/vendor/lib/soundfx/libspatialaudio.so">Repository</a>
+</li>
+</ul>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Neil Firmware Dumps","item":"https://www.opencode.net/Neil-Firmware-Dumps"},{"@type":"ListItem","position":2,"name":"google","item":"https://www.opencode.net/Neil-Firmware-Dumps/google"},{"@type":"ListItem","position":3,"name":"tangorpro","item":"https://www.opencode.net/Neil-Firmware-Dumps/google/tangorpro"},{"@type":"ListItem","position":4,"name":"Repository","item":"https://www.opencode.net/Neil-Firmware-Dumps/google/tangorpro/-/blob/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085/vendor/lib/soundfx/libspatialaudio.so"}]}
+
+</script>
+</nav>
+
+
+
+</div>
+</div>
+
+</div>
+<div class="container-fluid container-limited project-highlight-puc">
+<main class="content" id="content-body" itemscope itemtype="http://schema.org/SoftwareSourceCode">
+<div class="flash-container flash-container-page sticky" data-qa-selector="flash_container">
+</div>
+
+
+
+
+<div class="js-signature-container" data-signatures-path="/Neil-Firmware-Dumps/google/tangorpro/-/commits/cca971af97a60ba9b9a2bbaca5628d1ad4068208/signatures?limit=1"></div>
+
+<div class="tree-holder gl-pt-4" id="tree-holder">
+<div class="nav-block">
+<div class="tree-ref-container">
+<div class="tree-ref-holder gl-max-w-26">
+<div data-project-id="4003" data-project-root-path="/Neil-Firmware-Dumps/google/tangorpro" data-ref="tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085" data-ref-type="" id="js-tree-ref-switcher"></div>
+</div>
+<ul class="breadcrumb repo-breadcrumb">
+<li class="breadcrumb-item">
+<a href="/Neil-Firmware-Dumps/google/tangorpro/-/tree/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085">tangorpro
+</a></li>
+<li class="breadcrumb-item">
+<a href="/Neil-Firmware-Dumps/google/tangorpro/-/tree/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085/vendor">vendor</a>
+</li>
+<li class="breadcrumb-item">
+<a href="/Neil-Firmware-Dumps/google/tangorpro/-/tree/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085/vendor/lib">lib</a>
+</li>
+<li class="breadcrumb-item">
+<a href="/Neil-Firmware-Dumps/google/tangorpro/-/tree/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085/vendor/lib/soundfx">soundfx</a>
+</li>
+<li class="breadcrumb-item">
+<a href="/Neil-Firmware-Dumps/google/tangorpro/-/blob/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085/vendor/lib/soundfx/libspatialaudio.so"><strong>libspatialaudio.so</strong>
+</a></li>
+</ul>
+</div>
+<div class="tree-controls gl-children-ml-sm-3"><a class="gl-button btn btn-md btn-default shortcuts-find-file" rel="nofollow" href="/Neil-Firmware-Dumps/google/tangorpro/-/find_file/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085"><span class="gl-button-text">
+Find file
+
+</span>
+
+</a><a class="gl-button btn btn-md btn-default " href="/Neil-Firmware-Dumps/google/tangorpro/-/commits/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085/vendor/lib/soundfx/libspatialaudio.so"><span class="gl-button-text">
+History
+</span>
+
+</a><a class="gl-button btn btn-md btn-default js-data-file-blob-permalink-url" href="/Neil-Firmware-Dumps/google/tangorpro/-/blob/cca971af97a60ba9b9a2bbaca5628d1ad4068208/vendor/lib/soundfx/libspatialaudio.so"><span class="gl-button-text">
+Permalink
+</span>
+
+</a></div>
+</div>
+
+<div class="info-well d-none d-sm-block">
+<div class="well-segment">
+<ul class="blob-commit-info">
+<li class="commit flex-row js-toggle-container" id="commit-cca971af">
+<div class="avatar-cell d-none d-sm-block">
+<a href="/bluelight005"><img alt="bluelight005&#39;s avatar" src="/assets/no_avatar-849f9c04a3a0d0cea2424ae97b27447dc64a7dbfae83c036c45b403392f0e8ba.png" class="avatar s40 d-none d-sm-inline-block" title="bluelight005"></a>
+</div>
+<div class="commit-detail flex-list gl-display-flex gl-justify-content-space-between gl-align-items-center gl-flex-grow-1 gl-min-w-0">
+<div class="commit-content" data-qa-selector="commit_content">
+<a class="commit-row-message item-title js-onboarding-commit-item " href="/Neil-Firmware-Dumps/google/tangorpro/-/commit/cca971af97a60ba9b9a2bbaca5628d1ad4068208">Add extras for tangorpro-user 14 UQ1A.231205.015 11084887 release-keys</a>
+<span class="commit-row-message d-inline d-sm-none">
+&middot;
+cca971af
+</span>
+<button class="gl-button btn btn-icon btn-md btn-default button-ellipsis-horizontal text-expander js-toggle-button" data-toggle="tooltip" data-container="body" title="Toggle commit description" aria-label="Toggle commit description" type="button"><svg class="s16 gl-icon gl-button-icon " data-testid="ellipsis_h-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#ellipsis_h"></use></svg>
+
+</button>
+<div class="committer">
+<a class="commit-author-link js-user-link" data-user-id="213050" href="/bluelight005">bluelight005</a> authored <time class="js-timeago" title="Dec 8, 2023 3:16pm" datetime="2023-12-08T15:16:39Z" data-toggle="tooltip" data-placement="bottom" data-container="body">Dec 08, 2023</time>
+</div>
+
+<pre class="commit-row-description gl-mb-3 gl-white-space-pre-line js-toggle-content">&#x000A;&#x000A;&#x000A;Signed-off-by: <span data-trailer="Signed-off-by:"><a href="mailto:neilchetty4559@gmail.com" title="neilchetty4559@gmail.com"><img alt="default avatar" src="https://www.opendesktop.org/member/avatar/d9432f0e9ce131d01b7a1e24c96c738a/64" class="avatar s16 avatar-inline"></a><a href="mailto:neilchetty4559@gmail.com" title="neilchetty4559@gmail.com">neilchetty</a> &lt;<a href="mailto:neilchetty4559@gmail.com" title="neilchetty4559@gmail.com">neilchetty4559@gmail.com</a>&gt;</span></pre>
+</div>
+<div class="commit-actions flex-row">
+
+<div class="js-commit-pipeline-status" data-endpoint="/Neil-Firmware-Dumps/google/tangorpro/-/commit/cca971af97a60ba9b9a2bbaca5628d1ad4068208/pipelines?ref=tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085"></div>
+<div class="commit-sha-group btn-group d-none d-sm-flex">
+<div class="label label-monospace monospace">
+cca971af
+</div>
+<button class="gl-button btn btn-icon btn-md btn-default " title="Copy commit SHA" aria-label="Copy commit SHA" aria-live="polite" data-toggle="tooltip" data-placement="bottom" data-container="body" data-category="primary" data-size="medium" data-clipboard-text="cca971af97a60ba9b9a2bbaca5628d1ad4068208" type="button"><svg class="s16 gl-icon gl-button-icon " data-testid="copy-to-clipboard-icon"><use href="/assets/icons-3591e1b0dc5b9091969f4b703f7bdaffa0ca7b2c7953b0f3a7e7dc1e71c3e43d.svg#copy-to-clipboard"></use></svg>
+
+</button>
+
+</div>
+</div>
+</div>
+</li>
+
+</ul>
+</div>
+
+</div>
+<div class="blob-content-holder js-per-page" data-blame-per-page="1000" id="blob-content-holder">
+<div data-blob-path="vendor/lib/soundfx/libspatialaudio.so" data-original-branch="tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085" data-project-path="Neil-Firmware-Dumps/google/tangorpro" data-ref-type="" data-resource-id="gid://gitlab/Project/4003" data-target-branch="tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085" data-user-id="" id="js-view-blob-app">
+<div class="gl-spinner-container" role="status"><span aria-label="Loading" class="gl-spinner gl-spinner-md gl-spinner-dark gl-vertical-align-text-bottom!"></span></div>
+</div>
+</div>
+
+</div>
+
+<script>
+//<![CDATA[
+  window.gl = window.gl || {};
+  window.gl.webIDEPath = '/-/ide/project/Neil-Firmware-Dumps/google/tangorpro/edit/tangorpro-user-14-UQ1A.231205.015-11084887-release-keys-9085/-/vendor/lib/soundfx/libspatialaudio.so'
+
+
+//]]>
+</script>
+
+</main>
+</div>
+
+
+</div>
+</div>
+<div class="top-nav-responsive layout-page">
+<div class="cloak-startup">
+<div data-view-model="{&quot;primary&quot;:[{&quot;type&quot;:&quot;header&quot;,&quot;title&quot;:&quot;Explore&quot;},{&quot;id&quot;:&quot;project&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Projects&quot;,&quot;active&quot;:true,&quot;icon&quot;:&quot;project&quot;,&quot;href&quot;:&quot;/explore&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:null,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Projects&quot;},&quot;partial&quot;:null,&quot;component&quot;:null},{&quot;id&quot;:&quot;groups&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Groups&quot;,&quot;active&quot;:false,&quot;icon&quot;:&quot;group&quot;,&quot;href&quot;:&quot;/explore/groups&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:null,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Groups&quot;},&quot;partial&quot;:null,&quot;component&quot;:null},{&quot;id&quot;:&quot;topics&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Topics&quot;,&quot;active&quot;:false,&quot;icon&quot;:&quot;labels&quot;,&quot;href&quot;:&quot;/explore/projects/topics&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:null,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Topics&quot;},&quot;partial&quot;:null,&quot;component&quot;:null},{&quot;id&quot;:&quot;snippets&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Snippets&quot;,&quot;active&quot;:false,&quot;icon&quot;:&quot;snippet&quot;,&quot;href&quot;:&quot;/explore/snippets&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:null,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Snippets&quot;},&quot;partial&quot;:null,&quot;component&quot;:null}],&quot;secondary&quot;:[],&quot;views&quot;:{&quot;search&quot;:{&quot;id&quot;:&quot;search&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Search&quot;,&quot;active&quot;:false,&quot;icon&quot;:&quot;search&quot;,&quot;href&quot;:&quot;/search?project_id=4003&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:null,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Search&quot;},&quot;partial&quot;:null,&quot;component&quot;:null}},&quot;shortcuts&quot;:[{&quot;id&quot;:&quot;project-shortcut&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Projects&quot;,&quot;active&quot;:false,&quot;icon&quot;:&quot;&quot;,&quot;href&quot;:&quot;/explore&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-projects&quot;,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Projects&quot;},&quot;partial&quot;:null,&quot;component&quot;:null},{&quot;id&quot;:&quot;groups-shortcut&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Groups&quot;,&quot;active&quot;:false,&quot;icon&quot;:&quot;&quot;,&quot;href&quot;:&quot;/explore/groups&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-groups&quot;,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Groups&quot;},&quot;partial&quot;:null,&quot;component&quot;:null},{&quot;id&quot;:&quot;topics-shortcut&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Topics&quot;,&quot;active&quot;:false,&quot;icon&quot;:&quot;&quot;,&quot;href&quot;:&quot;/explore/projects/topics&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-topics&quot;,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Topics&quot;},&quot;partial&quot;:null,&quot;component&quot;:null},{&quot;id&quot;:&quot;snippets-shortcut&quot;,&quot;type&quot;:&quot;item&quot;,&quot;title&quot;:&quot;Snippets&quot;,&quot;active&quot;:false,&quot;icon&quot;:&quot;&quot;,&quot;href&quot;:&quot;/explore/snippets&quot;,&quot;view&quot;:&quot;&quot;,&quot;css_class&quot;:&quot;dashboard-shortcuts-snippets&quot;,&quot;data&quot;:{&quot;testid&quot;:&quot;menu_item_link&quot;,&quot;qa_title&quot;:&quot;Snippets&quot;},&quot;partial&quot;:null,&quot;component&quot;:null}],&quot;menuTooltip&quot;:&quot;Main menu&quot;}" id="js-top-nav-responsive"></div>
+</div>
+</div>
+
+
+
+<script>
+//<![CDATA[
+if ('loading' in HTMLImageElement.prototype) {
+  document.querySelectorAll('img.lazy').forEach(img => {
+    img.loading = 'lazy';
+    let imgUrl = img.dataset.src;
+    // Only adding width + height for avatars for now
+    if (imgUrl.indexOf('/avatar/') > -1 && imgUrl.indexOf('?') === -1) {
+      const targetWidth = img.getAttribute('width') || img.width;
+      imgUrl += `?width=${targetWidth}`;
+    }
+    img.src = imgUrl;
+    img.removeAttribute('data-src');
+    img.classList.remove('lazy');
+    img.classList.add('js-lazy-loaded');
+    img.dataset.testid = 'js_lazy_loaded_content';
+  });
+}
+
+//]]>
+</script>
+<script>
+//<![CDATA[
+gl = window.gl || {};
+gl.experiments = {};
+
+
+//]]>
+</script>
+
+</body>
+</html>
+
