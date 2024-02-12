@@ -105,7 +105,6 @@ PRODUCT_PACKAGES += \
     EuiccGoogleOverlay \
     EuiccSupportPixel \
     EuiccSupportPixelPermissions \
-    HbmSVManager \
     MyVerizonServices \
     OBDM_Permissions \
     PixelNfc \
